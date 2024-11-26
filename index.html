@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GSAP</title>
+</head>
+
+<body>
+    <div class="bg-green-700">
+        <div class=" pinned-section text-white font-bold text-7xl text-center"> pin gsap</div>
+    </div>
+    <div class="bg-black min-h-screen flex items-center justify-center">
+        <h1 id="box" style="text-decoration: underline; font-weight: bold; font-size: 70px; color: white;">
+            Hello Everyone!
+        </h1>
+    </div>
+    <div class="min-h-screen bg-black flex flex-col items-center justify-center gap-20">
+        <div class="card bg-red-900 w-[100px] h-[100px]"></div>
+        <div class="card bg-red-900 w-[100px] h-[100px]"></div>
+        <div class="card bg-red-900 w-[100px] h-[100px]"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.fromTo(
+                "#box",
+                { x: "100px", color: "red" },
+                {
+                    x: "10px",
+                    color: "blue",
+                    duration: 2,
+                    repeat: 3,
+                    yoyo: true,
+                    stagger: 0.2,
+                    ease: "power2.out"
+                }
+            );
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.to(".pinned-section", {
+                scrollTrigger: {
+                    trigger: ".pinned-section",
+                    start: "top top",
+                    end: "+=300",
+                    pin: true,
+                },
+            });
+
+            gsap.utils.toArray(".card").forEach(card => {
+                gsap.fromTo(
+                    card,
+                    { rotation: 0, opacity: 0, },
+                    {
+                        rotation: 360,
+                        opacity: 1,
+                        duration: 4,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 80%",
+                            end: "top 70%",
+                            scrub: true,
+                            markers: true,
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -7,14 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>GSAP Animations</title>
 </head>
-
 <body>
     <div class="pt-20">
         <div class="box size-[100px] bg-red-600 relative opacity-100" id="box1"></div>
         <div class="box size-[100px] bg-blue-600 relative opacity-100 mt-10" id="box2"></div>
         <div class="box size-[100px] bg-green-600 relative opacity-100 mt-10" id="box3"></div>
+        <div class="box size-[100px] bg-pink-600 relative opacity-100 mt-10" id="box4"></div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
         //add
@@ -23,7 +22,6 @@
         let fadeBox1 = gsap.to("#box1", { opacity: 0.5, duration: 3 });
         tl.add(moveBox1)
             .add(fadeBox1, "+=0.5");
-
         // from and to
         gsap.fromTo("#box2", {
             x: -300,
@@ -33,18 +31,21 @@
             x: 500,
             opacity: 1,
             duration: 5,
-            repeat:-1
-        });
-   
-
-        //set and to
-        gsap.set("#box3", {
-            x: 100,
-            opacity: 0,
-            scale: 0.5
+            repeat: -1
         });
         gsap.to("#box3", {
             x: 400,
+            opacity: 1,
+            scale: 1,
+            duration: 2
+        });
+        gsap.set("#box4", {
+            x: 600,
+            opacity: 0,
+            scale: 0.5
+        });
+        gsap.to("#box4", {
+            x: 0,
             opacity: 1,
             scale: 1,
             duration: 2

@@ -7,50 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
-
 <body class="bg-gray-900 text-white flex items-center justify-center h-screen">
     <div class="text-center space-y-6">
         <h1 class="text-4xl font-bold opacity-0" id="heroText">Welcome to My Website</h1>
-
         <p class="text-lg opacity-0" id="heroSubtext">Let's build something amazing with GSAP!</p>
-
         <div class="space-x-4 opacity-0" id="heroButtons">
             <button class="px-6 py-2 bg-blue-600 rounded hover:bg-blue-700">Get Started</button>
             <button class="px-6 py-2 bg-green-600 rounded hover:bg-green-700">Learn More</button>
         </div>
-
         <img src="assets/images/png/hero-image.png" alt="Hero Image" class="mx-auto max-w-[400px] opacity-0"
             id="heroImage">
     </div>
     <script>
         let tl = gsap.timeline();
-
-        tl.to("#heroText", {
-            y: -20,
-            opacity: 1,
-            duration: 1,
-            ease: "power2.out"
-        })
-            .to("#heroSubtext", {
-                y: -10,
-                opacity: 1,
-                duration: 1,
-                ease: "power2.out"
-            }, "-=0.5") 
-            .to("#heroButtons", {
-                opacity: 1,
-                y: -10,
-                duration: 1,
-                ease: "power1.out"
-            }, "-=0.5")
-            .to("#heroImage", {
-                opacity: 1,
-                scale: 1.1,
-                duration: 1.2,
-                ease: "elastic.out(1, 0.4)"
-            }, "-=0.5");
+        tl.to("#heroText", {y: -20, opacity: 1, duration: 1, ease: "power2.out"})
+            .to("#heroSubtext", { y: -10, opacity: 1, duration: 1, ease: "power2.out" }, "-=0.5") 
+            .to("#heroButtons", { opacity: 1, y: -10, duration: 1, ease: "power1.out" }, "-=0.5")
+            .to("#heroImage", { opacity: 1, scale: 1.1, duration: 1.2, ease: "elastic.out(1, 0.4)" }, "-=0.5");
     </script>
 
 </body>
 
-</html>
+</html

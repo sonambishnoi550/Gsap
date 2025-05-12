@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="!overflow-x-hidden">
+    <section class="pt-16">
+        <h2 class="text-7xl text-center mainText">Heading</h2>
+        <p class="text-center max-w-[500px] mx-auto text-2xl text mt-7">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ut, obcaecati.</p>
+        <p class="text1 text-2xl text-center max-w-[500px] mx-auto mt-7">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, incidunt! </p>
+        <p class="text2 text-2xl text-center max-w-[500px] mx-auto mt-7">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, quod! </p>
+        <p class="text3 text-2xl text-center max-w-[500px] mx-auto mt-7">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, excepturi. </p>
+        <p class="text4 text-2xl text-center max-w-[500px] mx-auto mt-7">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, tempora. </p>
+        <p class="text5 text-2xl text-center max-w-[500px] mx-auto mt-7">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, corporis. </p>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        const tl = gsap.timeline({ repeat: -1, yoyo: true });
+        tl.from(".mainText", { x: 500, opacity: 0, duration: 3 });
+        tl.from(".text", { x: -500, opacity: 0, duration: 3 });
+        tl.from(".text1", { x: 500, opacity: 0, duration: 3 });
+        tl.from(".text2", { x: -500, opacity: 0, duration: 3 });
+        tl.from(".text3", { x: 500, opacity: 0, duration: 3 });
+        tl.from(".text4", { x: -500, opacity: 0, duration: 3 });
+        tl.from(".text5", { x: 500, opacity: 0, duration: 3 });
+    </script>
+</body>
+
+</html>

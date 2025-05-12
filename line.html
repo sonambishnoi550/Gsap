@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Progress Bar</title>
 </head>
+
 <body>
     <section class="min-h-screen flex justify-center items-center py-10">
         <div class="text-6xl">Scroll down</div>
@@ -40,7 +42,7 @@
                 start: "top top",
                 end: "+=200%",
                 pin: true,
-                scrub: true,   
+                scrub: true,
             }
         });
         tl.to(".custom-line", { width: "40%", duration: 1 })
@@ -51,4 +53,5 @@
             .to(".text3", { opacity: 1, duration: 1 }, "4.5");
     </script>
 </body>
+
 </html>

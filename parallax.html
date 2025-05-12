@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GSAP Parallax with 4 Sections</title>
+    <style>
+
+        .background {    
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="parallax-container relative min-h-screen overflow-hidden">
+        <div class="background fixed top-0 left-0 w-full h-full bg-cover bg-center -z-10"></div>
+        <div class="section min-h-screen flex justify-center items-center text-6xl text-white relative bg-black/60">Section 1</div>
+        <div class="section-one min-h-screen flex justify-center items-center text-6xl text-white relative bg-red-400/60">Section 2</div>
+        <div class="section-two min-h-screen flex justify-center items-center text-6xl text-white relative bg-gray-600/60">Section 3</div>
+        <div class="section-three min-h-screen flex justify-center items-center text-6xl text-white relative bg-green-500/60">Section 4</div>
+    </div>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+       gsap.to(".background", {
+            y: -200, 
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".parallax-container",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -7,19 +7,10 @@
     <title>gsap-practice</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
 </head>
 
 <body>
-    <section class="bg-black min-h-100vh">
-        <div class="container mx-auto py-16">
-            <p class="text-[#dfdcff] text-4xl font-bold mb-20 text-center">Animation Practice</p>
-            <p class="text-animate text-[#dfdcff] text-[52px] max-w-[900px] mx-auto font-bold text-center"
-                data-splitting="chars">
-             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus quis doloremque dolorum!
-            </p>
-        </div>
-    </section>
+    
     <section class=" min-h-screen flex gap-5 flex-col">
         <div id="card-1"
             class="bg-white md:p-20 sm:p-4 p-3 flex justify-center items-center flex-col max-w-[960px] !h-full mx-auto mb-10">
@@ -137,15 +128,9 @@
                 sint asperiores quibusdam enim cumque dignissimos.</p>
         </div>
     </section>
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
         gsap.to("#card-1", {
@@ -199,20 +184,6 @@
             }
         })
     </script>
-    <script>
-        Splitting();
-        gsap.from(".char", {
-            yPercent: "random([-100, 100])",
-            rotation: "random(-30, 30)",
-            ease: "back.out",
-            autoAlpha: 0,
-            repeat: 4,
-            yoyo: true,
-            stagger: {
-                amount: 0.5, 
-                from: "random", 
-            }
-        })
-    </script>
+    
 </body>
 </html>

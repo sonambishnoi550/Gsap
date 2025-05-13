@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./style.css">
     <!-- ====== TAILWIND CSS ======= -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- ====== TAILWIND JS ======= -->
-    <script src="./tailwind.config.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -18,17 +16,16 @@
 </head>
 
 <body>
-    <!-- <section class="bg-black min-h-100vh">
+    <section class="bg-black min-h-100vh">
         <div class="container mx-auto py-16">
             <p class="text-[#dfdcff] text-4xl font-bold mb-20 text-center">Animation Practice</p>
             <p class="text-animate text-[#dfdcff] text-[52px] max-w-[900px] mx-auto font-bold text-center"
                 data-splitting="chars">
                 "The path may be long, but each step forward is a victory in itself."
             </p>
-
         </div>
 
-    </section> -->
+    </section>
     <section class="bg-danger min-h-100vh p-section-red d-flex gap-5 flex-column">
         <div id="card-1"
             class="bg-white p-md-5 p-sm-4 p-3 d-flex justify-content-center align-items-center flex-column col-sm-8 col-12 mx-auto mb-200 h-100">
@@ -163,14 +160,13 @@
         gsap.to("#card-1", {
             scrollTrigger: {
                 trigger: "#card-1",
-                start: "top 80%",
+                start: "top top",
                 endTrigger: "#card-2",
                 pin: true,
                 scrub: true,
                 pinSpacing: false
             }
         });
-        //   card-2
         gsap.to("#card-2", {
             scrollTrigger: {
                 trigger: "#card-2",

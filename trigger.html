@@ -18,7 +18,7 @@
         <div class="flex items-center h-full w-full bg-ocean bg-cover bg-no-repeat bg-center">
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden flex items-center">
                 <div class="max-w-[1040px] mx-auto w-full p-5">
-                    <div class="absolute top-[5%] -right-[8%] min-h-screen max-w-[1400px] h-auto">
+                    <div class="absolute top-[49%] -right-[8%] min-h-screen max-w-[1400px] h-auto">
                         <div
                             class="custom-circle size-[1250px] bg-[#0d76a5]/70 rounded-full opacity-0 scale-50 transition-all duration-500">
                         </div>
@@ -48,7 +48,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
-        gsap.set('.custom-circle', { opacity: 0, scale: 0.25});
+        gsap.set('.custom-circle', { opacity: 0,scale:1});
         gsap.set('.text-1', { opacity: 0, x: 150 });
         gsap.timeline({
             scrollTrigger: {
@@ -59,7 +59,7 @@
                 pin: true,
             }
         })
-            .to('.custom-circle', { opacity: 1, scale: 1, duration: 0.75 })
+            .to('.custom-circle', { opacity: 1,  duration: 0.75, scale: 1.80 })
             .to('.text-1', { opacity: 1, x: 0, duration: 2 })
             .to('#timeline-1', {
                 x: " -20%",

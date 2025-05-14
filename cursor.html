@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+.outline-text {
+	-webkit-text-stroke-width: 4px;
+	-webkit-text-stroke-color: ghostwhite;	
+}
+    </style>
+</head>
+<body class="bg-black overflow-x-hidden overflow-y-scroll">
+    <section class="min-h-screen">
+        <h1 class="text-8xl text-white text-center p-20">Scroll Down</h1>
+    </section>
+    <section class=" p-14 min-h-screen relative">
+        <div class="container">
+            <h2 class="filled-text absolute top-[200px] left-[100px] z-10 text-9xl font-semibold text-white">SELECTIVE FOCUS</h2>
+            <h2 class="outline-text absolute top-[200px] left-[100px] z-30 text-9xl font-semibold text-transparent">SELECTIVE FOCUS</h2>
+            <img class="image absolute top-[50px] left-[700px] z-20 h-[400px] w-auto" src="https://images.pexels.com/photos/2209315/pexels-photo-2209315.jpeg">
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    
+    <script type="text/javascript">
+        gsap.to(".filled-text, .outline-text", {
+            scrollTrigger: {
+                trigger: ".filled-text, .outline-text",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            },
+            x: 200
+        })
+
+        gsap.to(".image", {
+            scrollTrigger: {
+                trigger: ".image",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1,
+                markers: true,
+                duration:4
+
+            },
+            x: -490,
+        })
+    </script>
+</body>
+</html>

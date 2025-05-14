@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+        .bg-ocean {
+            background: url(https://images.unsplash.com/photo-1488188840666-e2308741a62f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2074&q=80) no-repeat center center;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="timeline-02" class="timeline bg-black min-h-screen relative overflow-y-clip flex flex-wrap flex-col">
+        <div class="flex items-center h-full w-full bg-ocean bg-cover">
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden flex items-center">
+                <div class="max-w-[1040px] mx-auto w-full p-5">
+                    <div class="absolute -top-[10%] -right-[28%] min-h-screen max-w-[1400px] h-auto">
+                        <div
+                            class="custom-circle w-[1250px] h-[1250px] bg-[#0d76a5] rounded-full opacity-0 scale-50 transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="text-black text-center w-full left-0 font-bold p-4 text-5xl top-0 absolute">
+                        Scroll down &darr;
+                    </div>
+                    <div class="block max-w-[500px] py-5 ml-auto right-0 absolute pt-[90px] text-1 z-10">
+                        <h2 class="text-7xl text-white mb-5">Lorem ipsum dolor sit.<span> &hellip;</span></h2>
+                    </div>
+                    <div class="block max-w-[500px] py-5 ml-auto right-0 top-20 absolute pt-[90px] text-2 z-10">
+                        <p class="text-4xl text-white mb-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Exercitationem laborum quasi consequatur? Debitis ullam corrupti obcaecati nulla vitae!
+                            Sequi ad perspiciatis distinctio repellendus, magni aperiam ea? Rem dolorum voluptates
+                            nihil?</p>
+                        <p class="text-4xl font-bold text-white">Scroll to continue...</p>
+                    </div>
+                    <div class="block max-w-[500px] py-5 ml-auto right-0 absolute pt-[90px] text-3 z-10">
+                        <p class="text-4xl text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                            recusandae distinctio veniam?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-0 left-0 right-0 bottom-0 -z-10 bg-black"></div>
+        </div>
+        <div class="flex items-center h-full">
+            <p class="text-[#0d76a5] max-w-[500px] ml-10 text-3xl font-semibold">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Modi iure, veritatis eligendi voluptatibus dicta adipisci numquam voluptas quibusdam
+                qui culpa.</p>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.set('.custom-circle', { opacity: 0, scale: 0.25, transformOrigin: '50% 100%' });
+        gsap.set('.text-1', { opacity: 1, x: 0 });
+        gsap.set('.text-2', { opacity: 0, x: 150 });
+        gsap.set('.text-3', { opacity: 0, x: 150 });
+        let hscroll2 = document.getElementById("timeline-02");
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#timeline-02",
+                start: "top top",
+                end: () => "+=3500",
+                scrub: true,
+                pin: true,
+                invalidateOnRefresh: true,
+            }
+        })
+            .to('.custom-circle', { opacity: 1, scale: 1, duration: 0.75 })
+            .to('.text-1', { opacity: 0, x: 150, duration: 0.5 })
+            .to('.text-2', { opacity: 1, x: 0, duration: 0.5 })
+            .to('.text-2', { opacity: 0, x: -150, duration: 0.5 })
+            .to('.text-3', { opacity: 1, x: 0, duration: 0.5 })
+           .to(hscroll2, {
+                x: () => `-${hscroll2.scrollWidth - window.innerWidth}px`,
+                ease: "none",
+                duration: 1,
+            });
+    </script>
+</body>
+
+</html>

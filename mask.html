@@ -1,290 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
     <style>
-        html, body{
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-}
-
-.space{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.back-1{
-    background: url('https://images.unsplash.com/photo-1674443544891-9c00f240b69c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzY2NDY5MjQ&ixlib=rb-4.0.3&q=80') center center /cover;
-}
-
-h2{
-  font-size: 5rem;
-  opacity: 0.2;
-  line-height: 2;
-  margin: 0;
-  translate: (0,0);
-}
-
-h2 span {
-    display: block;
-    overflow: hidden;
-  }
-
-#text {
-  mix-blend-mode: difference;
-  color: #fff;
-  overflow: hidden;
-  width: 100%;
-  height: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 5vh 0;
-}
-
-
-h1{
-  mix-blend-mode: difference;
-  font-size: 8rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: .1;
-}
-
-.inverse{
-  mix-blend-mode: difference;
-}
-
-.circle {
-  background-color: #fff;
-  width: 0px;
-  height: 0px;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: 5%;
-}
-
-.intro{
-  opacity: 1;
-  transform: translateY(50%);
-}
-
-.row{
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-}
-
-.row p{
-  padding: 5%;
-  flex-basis: 50%;
-  position: relative;
-}
-
-figure{
-  display: block;
-  flex-basis: 50%;
-}
-
-.clip{
-  clip-path:  inset(10% 10% 10% 10%);
-  text-align: center;
-  transition: transform 0.5s ease-in-out;
-}
-
-.row:hover > .clip {
-  transform: scale(1.05);
-}
-
-.clip img{
-  width: 90%;
-  height: auto;
-  object-fit: cover;
-}
+        .back-1 {
+            background: url('https://images.unsplash.com/photo-1674443544891-9c00f240b69c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzY2NDY5MjQ&ixlib=rb-4.0.3&q=80');
+        }
     </style>
 </head>
-<body>
-    <section class="space goUp back-1">
-        <h2 class="intro"><span><span>WE ROAST COFFEE</span></span></h2>
-    </section>
-    <section id='text'>
-        <div class="circle"></div>
-        <h1 class="text-line">we are all</h1>
-        <h1 class="text-line">gonna make it</h1>
-        <div class="row">
-            <p class="inverse up left">Vivamus varius vulputate nibh, vel commodo eros scelerisque in. Suspendisse interdum
-                posuere aliquam. Donec viverra tellus sed sodales consectetur. Nam rhoncus, mauris vitae pharetra semper,
-                libero dolor malesuada erat, quis rutrum nulla nisi vitae magna. Interdum et malesuada fames ac ante ipsum
-                primis in faucibus. Praesent porta pretium orci eu malesuada. Cras id hendrerit odio, ut efficitur metus.
-                Nunc auctor nec arcu et feugiat. Donec sed aliquam ante. Aliquam ullamcorper elementum dui efficitur
-                imperdiet. Nullam urna magna, sollicitudin vehicula condimentum sed, varius at nulla. Vivamus vel tortor
-                tincidunt, commodo ligula ut, congue massa. Vestibulum vel tristique sem. Mauris a egestas dui. Nullam eu
-                condimentum tellus, vitae dapibus est. Etiam sollicitudin turpis aliquam, iaculis nisl ut, molestie sapien.
-            </p>
-            <figure class="clip">
-                <img class="wagmi right"
-                    src='https://images.unsplash.com/photo-1649790797624-848ca1b5cfa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDU1MDYwODJ8&ixlib=rb-4.0.3&q=80&w=400'
-                    alt=''>
-            </figure>
-        </div>
-        <div class="row">
-            <figure class="clip">
-                <img class="wagmi left"
-                    src='https://images.unsplash.com/photo-1703533136832-2e91ef1a746f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDU0OTkyNTl8&ixlib=rb-4.0.3&q=80&w=400'
-                    alt=''>
-            </figure>
-            <p class="inverse up">Vivamus varius vulputate nibh, vel commodo eros scelerisque in. Suspendisse interdum
-                posuere aliquam. Donec viverra tellus sed sodales consectetur. Nam rhoncus, mauris vitae pharetra semper,
-                libero dolor malesuada erat, quis rutrum nulla nisi vitae magna. Interdum et malesuada fames ac ante ipsum
-                primis in faucibus. Praesent porta pretium orci eu malesuada. Cras id hendrerit odio, ut efficitur metus.
-                Nunc auctor nec arcu et feugiat. Donec sed aliquam ante. Aliquam ullamcorper elementum dui efficitur
-                imperdiet. Nullam urna magna, sollicitudin vehicula condimentum sed, varius at nulla. Vivamus vel tortor
-                tincidunt, commodo ligula ut, congue massa. Vestibulum vel tristique sem. Mauris a egestas dui. Nullam eu
-                condimentum tellus, vitae dapibus est. Etiam sollicitudin turpis aliquam, iaculis nisl ut, molestie sapien.
-            </p>
-        </div>
-    </section>
-    <section class="space goUp">
-        <h2 class="up">WE ROAST COFFEE</h2>
-        <h2 class="up">AND SHIP TEA</h2>
-    </section> 
-    <section class="space">
-        <img class="down"
-            src='https://images.unsplash.com/photo-1604614440358-ed8c049ffdb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzY4MTg3Mzg&ixlib=rb-4.0.3&q=80&w=600'
-            alt='dowm'>
-        <h2 class="up">Square</h2>
-    </section>
-    
-    <section class="space back-1">
-    </section>
-    <!-- GSAP Core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    
-    <!-- ScrollTrigger Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+<body class="bg-white m-0 p-0">
+    <section class="min-h-screen flex flex-col justify-center items-center back-1 bg-cover bg-no-repeat bg-center">
+        <h2 class="text-[5rem] opacity-20 leading-[2] m-0">
+            <span class="block overflow-hidden roast !text-black">WE ROAST COFFEE</span>
+        </h2>
+    </section>
+    <section id="text"
+        class="relative flex flex-col justify-center items-center w-full h-[100vw] py-[5vh] text-white mix-blend-difference mt-20">
+        <div class="circle bg-white/40 mix-blend-difference rounded-full w-0 h-0 absolute top-[5%] z-0"></div>
+        <h1 class="text-[8rem] font-black uppercase text-center relative z-10">we are all</h1>
+        <h2 class="text-[5rem] opacity-20 leading-[2] m-0  relative z-10">gonna make it</h2>
+        <div class="w-[90%] mx-auto flex flex-row">
+            <p class="p-[5%] basis-1/2 relative z-10">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi ducimus eius nesciunt, magnam aliquid
+                quaerat assumenda rerum provident repellendus fugiat illo unde? Laborum blanditiis id consequatur cumque
+                atque doloremque rem.
+            </p>
+            <div class="basis-1/2 clip">
+                <img class="w-[90%] h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1649790797624-848ca1b5cfa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDU1MDYwODJ8&ixlib=rb-4.0.3&q=80&w=400"
+                    alt="img" />
+            </div>
+        </div>
+        <div class="w-[90%] mx-auto flex flex-row">
+            <div class="basis-1/2 clip">
+                <img class="w-[90%] h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1703533136832-2e91ef1a746f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDU0OTkyNTl8&ixlib=rb-4.0.3&q=80&w=400"
+                    alt="img" />
+            </div>
+            <p class="p-[5%] basis-1/2 relative z-10">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor porro recusandae quis quisquam odio a
+                libero ipsam, voluptatem iste quos qui. Beatae fugiat ullam quos asperiores id porro natus ipsa?
+
+            </p>
+        </div>
+        <h2 class=" text-center mt-20 text-8xl relative z-20">Thank you</h2>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
-            gsap.to(".circle", {
-                width: "600vmax",
-                height: "600vmax",
-                ease: Power1.easeInOut,
-                scrollTrigger: {
-                    trigger: "#text",
-                    start: "top 100%",
-                    end: "bottom top",
-                    scrub: 0.5,
-                }
-            });
-            const textLines = document.querySelectorAll(".text-line");
-            const textLineAnim = gsap.timeline({
-              defaults: {
-                    duration: 1,
-                    ease: 'none'
-                },
-                scrollTrigger: {
-                    start: 0,
-                    end: 'max',
-                    scrub: 0.5
-                }
-            })
-            textLineAnim
-                .fromTo(textLines, {
-                    x: (index, target) => index % 2 ? window.innerWidth : -window.innerWidth
-                }, {
-                    x: 0
-                }, 0)
-                .fromTo(textLines, {
-                    x: 0
-                }, {
-                    x: (index, target) => index % 2 ? -window.innerWidth : window.innerWidth,
-                    immediateRender: false
-                }, 2)
-            gsap.utils.toArray(".up").forEach(element => {
-                gsap.fromTo(element,
-                    {
-                        yPercent: 50,
-                        opacity: .2,
-                    },
-                    {
-                        duration: 0.8,
-                        delay: 1,
-                        opacity: 1,
-                        yPercent: -50,
-                        ease: "power",
-                        stagger: 0.02,
-                        scrollTrigger: {
-                            trigger: element,
-                            start: "top 100%",
-                            end: "bottom top",
-                            scrub: 0.5,
-                        }
-                    });
-            });
-            gsap.to(".down", {
-                duration: .5,
-                yPercent: 50,
-                ease: "sine",
-                stagger: 0.2,
-                scrollTrigger: {
-                    trigger: ".down",
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: 0.5,
-                }
-            });
-            gsap.to(".intro", {
-                opacity: 1,
-                y: -30,
-                scrollTrigger: {
-                    trigger: ".wrpr",
-                    scrub: 0.5,
-                    start: "bottom center",
-                    end: "20px 80%",
-                }
-            });
-            const photos = gsap.utils.toArray('.clip img');
-            photos.forEach(photo => {
-                const tl = gsap.timeline({
+        const tl = gsap.timeline({});
+        tl.from(".roast", { y: 500, opacity: 1, duration: 3 });
+
+        gsap.to(".circle", {
+            width: "130vmax",
+            height: "130vmax",
+            ease: "power1.inOut",
+            scrollTrigger: {
+                trigger: "#text",
+                start: "top 100%",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+
+        document.querySelectorAll(".clip img").forEach(img => {
+            gsap.fromTo(img,
+                { y: "20%", opacity: 0 },
+                {
+                    y: "0%",
+                    opacity: 1,
                     scrollTrigger: {
-                        trigger: photo,
-                        start: 'top bottom',
-                        end: 'bottom top',
-                        scrub: 0.75,
-                        toggleActions: 'play none none none',
-                    },
-                });
-                tl.fromTo(
-                    photo,
-                    { y: '-20%' },
-                    { y: '0%' }
-                );
-            });
-            let tl = gsap.timeline();
-            tl.from("h1 span>span", {
-                duration: 0.75,
-                y: 150,
-                autoAlpha: 0,
-                ease: Power3.out,
-                stagger: 1.5
-            })
-            tl.from("h2 span>span", {
-                duration: 0.75,
-                y: 150,
-                autoAlpha: 0,
-                ease: Power3.out,
-                stagger: 1.5
-            })
+                        trigger: img,
+                        start: "top 90%",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                }
+            );
+        });
+
+        document.querySelectorAll("#text p").forEach(p => {
+            gsap.fromTo(p,
+                { x: -400, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: p,
+                        start: "top 85%",
+                        end: "top 60%",
+                    }
+                }
+            );
+        });
     </script>
+
+
 </body>
+
 </html>
